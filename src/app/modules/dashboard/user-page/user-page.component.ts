@@ -34,6 +34,9 @@ export class UserPageComponent implements OnInit {
   }
 
   onSearch(searchValue: string): void {
+    if (searchValue === '') {
+      return this.updateFilteredUsers();
+    }
     this.filteredUsers = this.users.filter(user =>
       user.name.toLowerCase().includes(searchValue.toLowerCase())
     );

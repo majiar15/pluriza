@@ -11,6 +11,7 @@ import { UserLoadMoreComponent } from './modules/dashboard/user-page/components/
 import { HttpClientModule } from '@angular/common/http';
 import { UserPageComponent } from './modules/dashboard/user-page/user-page.component';
 import { TableComponent } from './common/components/table/table.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TableComponent } from './common/components/table/table.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxSkeletonLoaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,13 @@
 
     <div>
         <app-user-search (searchEvent)="onSearch($event)"></app-user-search>
-        <app-user-list [users]="filteredUsers" *ngIf="!loading"></app-user-list>
+        @defer {
+            <app-user-list [users]="filteredUsers"></app-user-list>
+          } @placeholder (minimum 1000ms) {
+            <div class="item-skeleton">
+                <ngx-skeleton-loader count="5" appearance="line"  />
+            </div>
+          }
 
         <app-load-more (loadMoreEvent)="onLoadMore()"></app-load-more>
       </div>
