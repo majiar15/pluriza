@@ -1,0 +1,17 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th *ngFor="let title of titles">{{ title }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of data">
+      <td
+        *ngFor="let property of getObjectKeys(record)"
+      >
+        {{ record[property] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+

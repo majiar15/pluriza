@@ -8,19 +8,25 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { UserListComponent } from './modules/dashboard/user-page/components/user-list/user-list.component';
 import { UserSearchComponent } from './modules/dashboard/user-page/components/user-search/user-search.component';
 import { UserLoadMoreComponent } from './modules/dashboard/user-page/components/user-load-more/user-load-more.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserPageComponent } from './modules/dashboard/user-page/user-page.component';
+import { TableComponent } from './common/components/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     DashboardComponent,
+    TableComponent,
     UserListComponent,
     UserSearchComponent,
-    UserLoadMoreComponent
+    UserLoadMoreComponent,
+    UserPageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
