@@ -1,1 +1,14 @@
-<p>user-page works!</p>
+<div>
+
+    <h1>Users</h1>
+    
+
+    <div>
+        <app-user-search (searchEvent)="onSearch($event)"></app-user-search>
+        <app-user-list [users]="filteredUsers" *ngIf="!loading"></app-user-list>
+
+        <app-load-more (loadMoreEvent)="onLoadMore()"></app-load-more>
+      </div>
+
+
+</div>
