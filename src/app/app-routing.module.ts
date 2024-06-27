@@ -5,7 +5,6 @@ import { UserPageComponent } from './modules/dashboard/user-page/user-page.compo
 
 const routes: Routes = [
   { path: "users", component: UserPageComponent },
-  { path: "post", component: UserPageComponent },
   { path: '', redirectTo: 'users', pathMatch: 'full' },
   { path: '**', redirectTo: 'users', pathMatch: 'full' },
 ];

@@ -15,12 +15,7 @@ export class SidebarComponent {
         title: 'users',
         class: 'bi bi-person-fill',
         link: 'users'
-    },
-    {
-        title: 'post',
-        class: 'bi bi-file-earmark-post',
-        link: 'post'
-    },
+    }
 ];
 
   public openMenu(){
