@@ -1,0 +1,23 @@
+<div>
+
+    <h1>Users</h1>
+    
+
+    <div>
+        <app-user-search (searchEvent)="onSearch($event)"></app-user-search>
+        @defer {
+            <app-user-list [users]="filteredUsers" *ngIf="filteredUsers.length > 0; else notFound"></app-user-list>
+            <ng-template #notFound>
+                <app-user-not-found></app-user-not-found>
+              </ng-template>
+          } @placeholder (minimum 1000ms) {
+            <div class="item-skeleton">
+                <ngx-skeleton-loader count="5" appearance="line"  />
+            </div>
+          }
+
+        <app-load-more (loadMoreEvent)="onLoadMore()"></app-load-more>
+      </div>
+
+
+</div>

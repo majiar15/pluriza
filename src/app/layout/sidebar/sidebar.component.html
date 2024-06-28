@@ -1,0 +1,26 @@
+<div class="sidebar" [ngClass]="!showMenu ? 'hidden-sidebar' : 'show-sidebar'">
+
+    <div>
+        <header>
+            <div class="title">My Dashboard</div>
+        </header>
+
+        <nav>
+            <ul>
+                <div class="item" *ngFor="let item of items" [routerLink]="[item.link]"
+                    routerLinkActive="item-active">
+                    <i [ngClass]="item.class"></i>
+                    <p>{{item.title}}</p>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+
+</div>
+<div class="sidebar-responsive">
+    <header>
+        <div class="title">My Dashboard</div>
+    </header>
+    <i class="bi bi-list" (click)="openMenu()"></i>
+</div>
