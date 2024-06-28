@@ -3,7 +3,7 @@
     flex-direction: row;
 }
 .content {
-    width: 100vw;
+    width: 100%;
     display: flex;
     overflow-y: auto;
     flex-direction: column;
@@ -22,6 +22,9 @@
 
 
 @media screen and (max-width: 720px) {
+    .content {
+        width: auto;
+    }
     .container-page {
         display: flex;
         flex-direction: column;

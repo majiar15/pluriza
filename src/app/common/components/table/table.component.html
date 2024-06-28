@@ -6,12 +6,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let record of data">
-      <td
-        *ngFor="let property of getObjectKeys(record)"
-      >
+      <td *ngFor="let property of getObjectKeys(record)">
         {{ record[property] }}
       </td>
     </tr>
   </tbody>
 </table>
-
