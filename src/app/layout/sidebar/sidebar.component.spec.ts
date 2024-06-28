@@ -50,6 +50,4 @@ describe('SidebarComponent', () => {
     expect(component.showMenu).toBe(initialValue);
   });
 
-  // You can add more tests as needed for other functionality
-
 });

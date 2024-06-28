@@ -8,7 +8,6 @@ describe('UserListComponent', () => {
   let component: UserListComponent;
   let fixture: ComponentFixture<UserListComponent>;
 
-  // Mock de usuarios
   const mockUsers: User[] = [
     {
       id: 1,
