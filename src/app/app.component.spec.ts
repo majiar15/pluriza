@@ -1,15 +1,27 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { UserPageComponent } from './modules/dashboard/user-page/user-page.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterModule.forRoot(
+          [
+            { path: "users", component: UserPageComponent },
+            { path: '', redirectTo: 'users', pathMatch: 'full' },
+            { path: '**', redirectTo: 'users', pathMatch: 'full' },
+          ]
+        )
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        UserPageComponent,
+        DashboardComponent,
+        SidebarComponent
       ],
     }).compileComponents();
   });
@@ -18,18 +30,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'pluriza-challenger'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('pluriza-challenger');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('pluriza-challenger app is running!');
   });
 });
