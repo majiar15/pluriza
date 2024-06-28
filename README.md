@@ -30,5 +30,5 @@ Esta prueba es un dashboard simple desarrollado en Angular que muestra datos de 
     ```
 
 2. cobertura de testing de la app:
-    ![cobertura de testing](./src/assets/coverage-surmary.png)
+    ![cobertura de testing](./src/assets/coverage-testing.png)
 
