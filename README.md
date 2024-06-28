@@ -1,27 +1,34 @@
-# PlurizaChallenger
+# prueba técnica pluriza - angular dev
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+Esta prueba es un dashboard simple desarrollado en Angular que muestra datos de usuarios obtenidos de una API RESTful. Incluye funcionalidades como búsqueda y paginación de usuarios.
+›
+## Instalación
 
-## Development server
+1. Clona el repositorio desde GitHub:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+   ```bash
+   git clone https://github.com/tu-usuario/dashboard-angular.git
+   ```
+2. Instala las dependencias:
+    ```bash
+    cd dashboard-angular
+    npm install
+    ```
 
-## Code scaffolding
+## Uso Básico
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Inicia la aplicación:
+    ```bash
+    ng serve
+    ```
+2. Abre tu navegador y visita http://localhost:4200/.
 
-## Build
+### Testing
+1. Para ejecutar pruebas unitarias:
+    ```bash
+    ng test
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. cobertura de testing de la app:
+    ![cobertura de testing](./src/assets/coverage-surmary.png)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
