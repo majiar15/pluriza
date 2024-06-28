@@ -108,6 +108,12 @@ describe('UserPageComponent', () => {
     expect(component.filteredUsers.length).toBe(1);
     expect(component.filteredUsers[0].name).toBe('Leanne Graham');
   });
+  it('should update filteredUsers on search value blank', () => {
+    component.users = mockUsers;
+    component.onSearch('');
+
+    expect(component.filteredUsers.length).toBe(0);
+  });
 
   it('should update currentPage and filteredUsers on load more', () => {
     component.users = mockUsers;
