@@ -7,11 +7,11 @@ Esta prueba es un dashboard simple desarrollado en Angular que muestra datos de 
 1. Clona el repositorio desde GitHub:
 
    ```bash
-   git clone https://github.com/tu-usuario/dashboard-angular.git
+   git clone https://github.com/majiar15/pluriza.git
    ```
 2. Instala las dependencias:
     ```bash
-    cd dashboard-angular
+    cd pluriza
     npm install
     ```
 
