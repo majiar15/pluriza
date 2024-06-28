@@ -5,7 +5,6 @@ import { UserSearchComponent } from './user-page/components/user-search/user-sea
 import { UserLoadMoreComponent } from './user-page/components/user-load-more/user-load-more.component';
 import { DashboardComponent } from './dashboard.component';
 import { SidebarComponent } from 'src/app/layout/sidebar/sidebar.component';
-import { UserListSilverComponent } from './user-page/components/user-list-silver/user-list-silver.component';
 
 
 
@@ -16,7 +15,6 @@ import { UserListSilverComponent } from './user-page/components/user-list-silver
     UserSearchComponent,
     UserLoadMoreComponent,
     DashboardComponent,
-    UserListSilverComponent,
 
   ],
   imports: [

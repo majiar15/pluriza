@@ -42,14 +42,12 @@ describe('TableComponent', () => {
     const rows = fixture.nativeElement.querySelectorAll('tbody tr');
     expect(rows.length).toBe(2);
 
-    // Check data in the first row
     const firstRowCells = rows[0].querySelectorAll('td');
     expect(firstRowCells.length).toBe(3);
     expect(firstRowCells[0].textContent).toContain('1');
     expect(firstRowCells[1].textContent).toContain('Alice');
     expect(firstRowCells[2].textContent).toContain('alice@example.com');
 
-    // Check data in the second row
     const secondRowCells = rows[1].querySelectorAll('td');
     expect(secondRowCells.length).toBe(3);
     expect(secondRowCells[0].textContent).toContain('2');
@@ -60,7 +58,7 @@ describe('TableComponent', () => {
   it('should call getObjectKeys and return correct keys', () => {
     const obj = { _id: 1, name: 'Alice', email: 'alice@example.com' };
     const keys = component.getObjectKeys(obj);
-    expect(keys.length).toBe(2); // Excluding _id
+    expect(keys.length).toBe(2);
     expect(keys).toContain('name');
     expect(keys).toContain('email');
     expect(keys).not.toContain('_id');
